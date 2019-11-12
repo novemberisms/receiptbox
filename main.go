@@ -13,9 +13,21 @@ import (
 )
 
 // const address = "http://localhost:3885/"
-const address = "http://192.168.7.91:3885/"
+// const address = "http://192.168.254.129:3885/"
+
+const port = "3885"
+
+var address string
 
 func main() {
+
+	ip := "localhost"
+
+	if len(os.Args) > 1 {
+		ip = os.Args[1]
+	}
+
+	address = fmt.Sprintf("http://%s:%s/", ip, port)
 
 	printPrelude()
 
