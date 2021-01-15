@@ -51,14 +51,14 @@ func recordEntry() {
 
 	inputReader := bufio.NewReader(os.Stdin)
 
-	fmt.Print("Date (mm-dd)     > ")
-	date, isOops := readString(inputReader)
+	fmt.Print("Restaurant       > ")
+	restaurant, isOops := readString(inputReader)
 	if isOops {
 		return
 	}
 
-	fmt.Print("Restaurant       > ")
-	restaurant, isOops := readString(inputReader)
+	fmt.Print("Date (mm-dd)     > ")
+	date, isOops := readString(inputReader)
 	if isOops {
 		return
 	}
